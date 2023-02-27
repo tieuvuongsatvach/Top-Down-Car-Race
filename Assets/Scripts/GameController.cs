@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         timeSpawn = 1f;
-        UIManager.ui.SetScoreText("Score: " + score);
+        UIManager.ui.SetScoreText($"Score: {score}");
         InvokeRepeating("ScoreIncrement", 0.5f, 0.5f);
     }
 
@@ -56,8 +56,8 @@ public class GameController : MonoBehaviour
     {
         if (!gameover)
         {
-        score++;
-        UIManager.ui.SetScoreText("Score: " + score);
+            score++;
+            UIManager.ui.SetScoreText($"Score: {score}");
         }
     }
 
