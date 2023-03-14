@@ -7,13 +7,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float speed = 10f;
     [SerializeField] private GameObject effect;
 
-    void Start()
-    {
-    }
-
     void Update()
     {
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
+        transform.Translate(Vector3.down * speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D col)

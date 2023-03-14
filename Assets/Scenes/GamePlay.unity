@@ -1448,6 +1448,7 @@ MonoBehaviour:
   - {fileID: 1010823584202114328, guid: b7accd156a3433e4d819746c195538df, type: 3}
   - {fileID: 8204563328127139073, guid: 5344eaa6aeca6d9458721b6bcd747792, type: 3}
   - {fileID: 8304864633265101899, guid: ec5d7cd5a8d5d6a45b2958a4754ae289, type: 3}
+  uiManager: {fileID: 1955507660}
 --- !u!4 &1151195532
 Transform:
   m_ObjectHideFlags: 0

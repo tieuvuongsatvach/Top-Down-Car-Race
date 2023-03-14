@@ -8,12 +8,6 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private GameObject gameoverPanel;
-    public static UIManager ui;
-
-    private void Awake()
-    {
-        ui = this;
-    }
 
     public void SetScoreText(string txt)
     {

@@ -11,8 +11,10 @@ public class Player : MonoBehaviour
 
     private Vector3 carPos;
     private float maxCarPos = 3.8f;
-    void Start()
+
+    void Awake()
     {
+
         carPos = transform.position;
     }
 

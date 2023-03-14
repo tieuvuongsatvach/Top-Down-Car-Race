@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private GameObject[] cars;
+
     private float maxCarPos = 3.8f;
     private Vector3 carPos;
     private float delayTime = 1f;
@@ -16,6 +17,8 @@ public class GameController : MonoBehaviour
     private bool gameover;
     public static GameController gc;
 
+    [SerializeField] private UIManager uiManager;
+
     private void Awake()
     {
         gc = this;
@@ -24,7 +27,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         timeSpawn = 1f;
-        UIManager.ui.SetScoreText($"Score: {score}");
+        uiManager.SetScoreText($"Score: {score}");
         InvokeRepeating("ScoreIncrement", 0.5f, 0.5f);
     }
 
@@ -33,7 +36,7 @@ public class GameController : MonoBehaviour
         if (gameover)
         {
             timeSpawn = 0;
-            UIManager.ui.ShowGameoverPanel(true);
+            uiManager.ShowGameoverPanel(true);
             return;
         }
 
@@ -57,7 +60,7 @@ public class GameController : MonoBehaviour
         if (!gameover)
         {
             score++;
-            UIManager.ui.SetScoreText($"Score: {score}");
+            uiManager.SetScoreText($"Score: {score}");
         }
     }
 

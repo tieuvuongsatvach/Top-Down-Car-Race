@@ -7,16 +7,10 @@ public class Racetrack : MonoBehaviour
     [SerializeField] private float speed = 2f;
     private Vector2 offset;
     private Renderer rend;
-    private int score;
 
     private void Awake()
     {
         rend = GetComponent<Renderer>();
-    }
-
-    void Start()
-    {
-
     }
 
     void Update()
